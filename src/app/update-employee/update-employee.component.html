@@ -1,0 +1,38 @@
+<div style="width:500px">
+  <h2 mat-dialog-title>Update Employee</h2>
+  <div mat-dialog-content>
+    <mat-form-field style="width: 100%; box-sizing: border-box;">
+      <input type="text" matInput placeholder="Name" [(ngModel)]="employee.name" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field style="width: 100%; box-sizing: border-box;">
+      <input type="text" matInput placeholder="Email" [(ngModel)]="employee.email" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field style="width: 100%; box-sizing: border-box;">
+      <input type="text" matInput placeholder="Phone" [(ngModel)]="employee.phNumber" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field style="width: 100%; box-sizing: border-box;">
+      <input type="text" matInput placeholder="Website" [(ngModel)]="employee.website" autocomplete="off">
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-actions align="end">
+        <span>
+          <button
+            type="button"
+            mat-flat-button
+            color="primary"
+            [mat-dialog-close]="true"
+          >
+            Clear
+          </button>
+          <button
+            type="button"
+            mat-stroked-button
+            color="primary"
+            (click)="closeDialog()"
+          >
+            Update
+          </button>
+        </span>
+  </div>
+</div>
